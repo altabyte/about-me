@@ -34,3 +34,6 @@ bower.json
 
 # Ignore RubyMine project settings.
 /.idea
+
+# Ignore the Jekyll compiled site.
+/_site
