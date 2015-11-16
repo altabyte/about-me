@@ -20,6 +20,10 @@ body {
   font-family: 'Metrophobic', sans-serif;
 }
 
+h1 {
+  color: $text-blue;
+}
+
 .navbar {
   min-height: 50px;
   background-color: #000000;
@@ -119,26 +123,28 @@ body {
   }
 
   nav.social-media {
-    svg {
-      fill: $text-blue;
-      width: 24px;
-      height: 24px;
+    margin: 32px 0;
+    font-size: 32px;
 
-      &:hover {
-
-      }
+    ul {
+      list-style: none;
     }
 
     li {
       display: inline-block;
+      padding: 10px;
       text-align: center;
+
 
       a {
         display: inline-block;
-        width: 100%;
-        padding: 8px;
-        border-radius: 6px;
-        line-height: 1em;
+        padding-top: 3px;
+        width: 50px;
+        height: 50px;
+        background-color: $text-blue;
+        color: white;
+        border-radius: 50%;
+        -webkit-transition: .3s ease-in-out;
       }
       a.facebook:hover  {
         background-color: $facebook-color;
@@ -158,9 +164,3 @@ body {
     }
   }
 }
-
-
-h1 {
-  color: $text-blue;
-}
-
