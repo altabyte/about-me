@@ -2,6 +2,7 @@
 ---
 @import url(https://fonts.googleapis.com/css?family=Metrophobic);
 
+$background-color: #080808;
 $text-blue:  #1d74f5;
 $text-white: #FFFFFF;
 $text-grey:  #999999;
@@ -15,13 +16,17 @@ $twitter-color: #55acee;
 
 body {
   position: relative;
-  background-color: #080808;
+  background-color: $background-color;
   color: $text-grey;
   font-family: 'Metrophobic', sans-serif;
 }
 
 h1 {
   color: $text-blue;
+}
+
+footer {
+  min-height: 38px;
 }
 
 .navbar {
@@ -60,6 +65,7 @@ h1 {
   max-width: 992px;
   position: relative;
 }
+
 
 
 #home {
@@ -164,6 +170,57 @@ h1 {
       a.twitter:hover {
         background-color: $twitter-color;
       }
+    }
+  }
+
+  .things-i-do {
+
+    h1 {
+      text-align: center;
+      color: $text-grey;
+      margin: 88px 0 20px;
+    }
+
+    ul.logos {
+      list-style: none;
+      margin: 0 auto;
+      text-align: center;
+
+      li {
+        position: relative;
+        display: inline-block;
+        width: 140px;
+        height: 140px;
+        border: 2px solid $text-white;
+        background-color: lighten($text-grey, 20%);
+        text-align: center;
+        margin: 12px;
+        padding-top: 8px;
+        overflow: hidden;
+        -webkit-transition: .3s ease-in-out;
+
+        &:hover {
+          background-color: $text-white;
+        }
+
+        svg {
+          fill: $background-color !important;
+          width: 90px;
+          height: 90px;
+        }
+
+        p {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 136px;
+          background-color: $background-color;
+          margin: 0;
+          font-size: 20px;
+          color: $text-white;
+        }
+      }
+
     }
   }
 }
