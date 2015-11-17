@@ -4,7 +4,8 @@
 
 $text-blue:  #1d74f5;
 $text-white: #FFFFFF;
-$text-grey:  #5c5c5c;
+$text-grey:  #999999;
+$text-grey-dark: #5c5c5c;
 
 $github-color: #829AA8;
 $google-plus-color: #d34836;
@@ -99,7 +100,7 @@ h1 {
       display: inline-block;
       font-style: italic;
       max-width: 400px;
-      color: $text-grey;
+      color: $text-grey-dark;
     }
 
     #summary {
@@ -178,7 +179,7 @@ h1 {
         width: 350px;
         height: 4px;
         border: none;
-        color: $text-grey;
+        color: $text-grey-dark;
         background-color: $text-grey;
         margin: 40px 0 30px auto;
 
