@@ -29,7 +29,18 @@ h1 {
   background-color: #000000;
 
   .navbar-brand {
-    color: $text-blue;
+    color: darken($text-white, 20%);
+
+    .tag {
+      display: inline-block;
+      padding: 0 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.8em;
+    }
+
+    &:hover {
+      color: $text-blue;
+    }
   }
 }
 
