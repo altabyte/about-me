@@ -180,6 +180,11 @@ footer {
       text-align: center;
       color: $text-grey;
       margin: 69px 0 30px;
+      -webkit-transition: .3s ease-in-out;
+
+      &:hover {
+        color: $text-white;
+      }
     }
 
     .lists {
@@ -222,6 +227,7 @@ footer {
         padding-top: 8px;
         overflow: hidden;
         -webkit-transition: .3s ease-in-out;
+        cursor: pointer;
 
         &:hover {
           background-color: $text-white;
