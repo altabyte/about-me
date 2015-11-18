@@ -26,7 +26,7 @@ h1 {
 }
 
 footer {
-  min-height: 38px;
+  min-height: 120px;
 }
 
 .navbar {
@@ -173,25 +173,49 @@ footer {
     }
   }
 
-  .things-i-do {
+  #things-i-do {
+    position: relative;
 
     h1 {
       text-align: center;
       color: $text-grey;
-      margin: 88px 0 20px;
+      margin: 69px 0 30px;
     }
 
-    ul.logos {
+    .lists {
+      font-size: 1.35em;
+      text-align: center;
+      color: lighten($text-blue, 15%);
+
+      ul {
+        padding: 0;
+        display: block;
+        list-style: none;
+
+        li {
+          padding: 8px 0;
+          -webkit-transition: .3s ease-in-out;
+
+          &:hover {
+            color: darken($text-white, 10%);
+          }
+        }
+      }
+    }
+
+    #logos {
       list-style: none;
-      margin: 0 auto;
+      margin: 40px auto;
+      padding: 0;
       text-align: center;
 
       li {
         position: relative;
         display: inline-block;
-        width: 140px;
-        height: 140px;
-        border: 2px solid $text-white;
+        width: 120px;
+        height: 120px;
+        border: 4px solid $text-white;
+        color: $text-white;
         background-color: lighten($text-grey, 20%);
         text-align: center;
         margin: 12px;
@@ -201,26 +225,58 @@ footer {
 
         &:hover {
           background-color: $text-white;
+          color: lighten($text-blue, 15%);
         }
 
         svg {
           fill: $background-color !important;
-          width: 90px;
-          height: 90px;
+          width: 70px;
+          height: 70px;
         }
 
         p {
           position: absolute;
           bottom: 0;
           left: 0;
-          width: 136px;
+          width: 112px;
           background-color: $background-color;
           margin: 0;
-          font-size: 20px;
-          color: $text-white;
+          font-size: 18px;
         }
       }
 
+    }
+  }
+}
+
+@media print, screen and (min-width: 500px) {
+  #things-i-do {
+    .lists {
+      position: relative;
+      max-width: 450px;
+      display: block;
+      margin: 0 auto;
+
+      ul {
+        width: 45%;
+      }
+
+      ul:first-child {
+        margin-right: 100px;
+        li {
+          text-align: left;
+        }
+      }
+
+      ul:last-child {
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        li {
+          text-align: right;
+        }
+      }
     }
   }
 }
@@ -284,6 +340,19 @@ footer {
           width: 100%;
         }
       }
+    }
+  }
+
+  #things-i-do {
+    .lists {
+      margin-left: 450px;
+    }
+
+    #logos {
+      position: absolute;
+      top: 110px;
+      left: 100px;
+      width: 300px;
     }
   }
 }
