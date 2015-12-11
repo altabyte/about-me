@@ -14,6 +14,8 @@ $linkedin-color: #007AB9;
 $facebook-color: #3b5998;
 $twitter-color: #55acee;
 
+$transition-time: 0.3s;
+
 body {
   position: relative;
   background-color: $background-color;
@@ -43,8 +45,12 @@ footer {
       font-size: 0.8em;
     }
 
+    -webkit-transition: $transition-time ease-in-out;
+    -moz-transition: $transition-time ease-in-out;
+
     &:hover {
-      color: $text-blue;
+      color: $text-white;
+      font-size: 1.8em;
     }
   }
 }
@@ -54,6 +60,9 @@ footer {
 
   .navbar-nav>li>a {
     color: white;
+
+    -webkit-transition: $transition-time ease-in-out;
+    -moz-transition: $transition-time ease-in-out;
 
     &:hover {
       color: $text-blue;
@@ -96,6 +105,12 @@ footer {
       width: 200px;
       border-radius: 50%;
       border: 10px solid darken($text-blue, 30%);
+      -webkit-transition: $transition-time ease-in-out;
+      -moz-transition: $transition-time ease-in-out;
+
+      &:hover {
+        border: 10px solid darken($text-blue, 25%);
+      }
     }
 
     hr {
@@ -107,6 +122,17 @@ footer {
       font-style: italic;
       max-width: 400px;
       color: $text-grey-dark;
+
+
+      a {
+        -webkit-transition: $transition-time ease-in-out;
+        -moz-transition: $transition-time ease-in-out;
+
+        &:hover {
+          text-decoration: none;
+          color: $text-white;
+        }
+      }
     }
 
     #summary {
@@ -118,6 +144,8 @@ footer {
       color: $text-white;
       margin: auto;
       font-size: 1.1em;
+      -webkit-transition: $transition-time ease-in-out;
+      -moz-transition: $transition-time ease-in-out;
 
       p {
         width: 75%;
@@ -128,6 +156,9 @@ footer {
         margin-bottom: 0;
       }
 
+      &:hover {
+        background-color: transparentize($text-blue, 0.10);
+      }
     }
   }
 
@@ -153,7 +184,8 @@ footer {
         background-color: $text-blue;
         color: white;
         border-radius: 50%;
-        -webkit-transition: .3s ease-in-out;
+        -webkit-transition: $transition-time ease-in-out;
+        -moz-transition: $transition-time ease-in-out;
       }
       a.facebook:hover  {
         background-color: $facebook-color;
@@ -180,7 +212,8 @@ footer {
       text-align: center;
       color: $text-grey;
       margin: 69px 0 30px;
-      -webkit-transition: .3s ease-in-out;
+      -webkit-transition: $transition-time ease-in-out;
+      -moz-transition: $transition-time ease-in-out;
 
       &:hover {
         color: $text-white;
@@ -198,11 +231,13 @@ footer {
         list-style: none;
 
         li {
-          padding: 8px 0;
-          -webkit-transition: .3s ease-in-out;
+          padding: 4px 0;
+          -webkit-transition: $transition-time ease-in-out;
+          -moz-transition: $transition-time ease-in-out;
 
           &:hover {
             color: darken($text-white, 10%);
+            cursor: /*url(../img/check-32.png),*/ pointer;
           }
         }
       }
@@ -226,7 +261,8 @@ footer {
         margin: 12px;
         padding-top: 8px;
         overflow: hidden;
-        -webkit-transition: .3s ease-in-out;
+        -webkit-transition: $transition-time ease-in-out;
+        -moz-transition: $transition-time ease-in-out;
         cursor: pointer;
 
         &:hover {
