@@ -20,9 +20,12 @@ Install the gems listed in [Gemfile](https://github.com/altabyte/about-me/blob/g
 
 Launch the localhost server
 
-    $ bundle exec jekyll serve --baseurl ''
+    $ bundle exec jekyll serve --baseurl '' --port 4040
 
-The site should then be available locally on port **4000** [http://localhost:4000/](http://localhost:4000/)
+The site should then be available locally on port **4040** [http://localhost:4040/](http://localhost:4040/)
 
-Note that without `--baseurl ''` the localhost URL will be
+Note 1, without `--baseurl ''` the localhost URL will be
 [http://localhost:4000/about-me/](http://localhost:4000/about-me/)
+
+Note 2, the default port for Jekyll is 4000, however [NX Server](https://www.nomachine.com/) 
+also uses this port so I have decided to use port 4040 locally.
