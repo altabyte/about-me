@@ -16,4 +16,4 @@ function my_message_addr(subject) {
  * Ideally this would be within an anchor mouseover event, but then I would not be able to
  * receive emails from mobile devices?
  */
-$("a.message").attr("href", my_message_addr("Message from RobGraham.com"));
+$("a.message").attr("href", my_message_addr("Message from RobGraham.me web site"));
