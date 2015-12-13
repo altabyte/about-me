@@ -1,6 +1,8 @@
 ---
 ---
 @import url(https://fonts.googleapis.com/css?family=Metrophobic);
+@import url(https://fonts.googleapis.com/css?family=Bad+Script);
+@import url(https://fonts.googleapis.com/css?family=Droid+Serif);
 
 $background-color: #080808;
 $text-blue:  #1d74f5;
@@ -70,14 +72,13 @@ footer {
   }
 }
 
-#home .container {
-  max-width: 992px;
-  position: relative;
-}
-
-
 
 #home {
+  .container {
+    max-width: 992px;
+    position: relative;
+  }
+
   #about-me {
     position: relative;
     margin-top: 18px;
@@ -395,6 +396,58 @@ footer {
       top: 110px;
       left: 100px;
       width: 300px;
+    }
+  }
+}
+
+
+/* -------------------------------------------------------------------------------------------- */
+
+#portfolio, #resume {
+  h1.page-title {
+    font-family: 'Droid Serif', serif;
+    font-size: 58px;
+    padding: 20px 0;
+    margin-bottom: 38px;
+
+    strong {
+      font-size: 38px;
+      font-weight: normal;
+      font-family: 'Bad Script', cursive;
+      display: block;
+      float: right;
+      color: $text-grey-dark;
+      padding: 10px 0;
+    }
+  }
+
+  article h2 {
+    font-family: 'Droid Serif', serif;
+    color: $text-blue;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  h1.page-title {
+    strong {
+      font-size: 38px !important;
+      float: none !important;
+      display: inline-block !important;
+    }
+  }
+}
+
+/** Apply gradient to name text for screen only, otherwise it won't print! */
+@media screen {
+  h1.page-title {
+    background: -webkit-linear-gradient(#555, #eee);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    strong {
+      background: -webkit-linear-gradient(#eee, #333);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
   }
 }
