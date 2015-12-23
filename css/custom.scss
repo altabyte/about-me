@@ -433,18 +433,39 @@ footer {
 
     p {
       color: $text-grey;
+      font-size: 1.2em;
+      text-align: justify;
     }
 
     a {
       color: $text-white;
+
+      &:hover {
+        border-bottom: dotted 1px $text-white;
+        text-decoration: none;
+      }
     }
 
     a[href^="http://"]:after, a[href^="https://"]:after {  /* Prevent title text from being printed */
       content: "";
     }
 
+    q {
+      font-style: italic;
+    }
+
+    em {
+      font-style: normal;
+      font-weight: bold;
+      color: $text-white;
+    }
+
     abbr {
       border-bottom: none;
+
+      &:after {
+        content: "";
+      }
     }
   }
 
