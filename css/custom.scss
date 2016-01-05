@@ -404,6 +404,13 @@ footer {
 /* -------------------------------------------------------------------------------------------- */
 
 #portfolio, #resume {
+
+  /* Make font smaller for printing */
+  @media print {
+    font-size: 0.6em;
+  }
+
+
   h1.page-title {
     font-family: 'Droid Serif', serif;
     font-size: 50px;
@@ -423,18 +430,53 @@ footer {
   }
 
   section {
-    margin-top: 36px;
+    margin-top: 48px;
+
+    hr {
+      display: block;
+      margin: 8px 0;
+      border: 0;
+      height: 1px;
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.90), rgba(150, 155, 155, 0.35), rgba(155, 155, 155, 0));
+    }
 
     h1 {
+      position: relative;
       font-size: 25px;
       font-family: 'Droid Serif', serif;
+      font-weight: bold;
       color: $text-blue;
+      margin: 20px 0 20px;
+
+      .date {
+        display: inline-block;
+        font-size: 0.65em;
+        font-style: italic;
+        font-weight: normal;
+        padding: 0 0 0 18px;
+      }
+
+      @media (min-width: 500px) {
+
+        span.date {
+          display: block;
+          float: right;
+          color: $text-grey-dark;
+          padding: 3px 0 0 0;
+        }
+      }
     }
 
     p {
       color: $text-grey;
       font-size: 1.2em;
       text-align: justify;
+    }
+
+    @media (min-width: 500px) {
+      p {
+        margin: 18px;
+      }
     }
 
     a {
@@ -469,13 +511,18 @@ footer {
     }
   }
 
-  details {
-    summary {
-      outline: none;
-    }
+  #education  {
+    details {
+      font-size: 1.2em;
+      margin-left: 18px;
+      summary {
+        outline: none;
+      }
 
-    p {
-      padding: 4px 24px;
+      p {
+        padding: 4px 24px;
+        font-size: 0.8em;
+      }
     }
   }
 }
