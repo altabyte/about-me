@@ -17,3 +17,28 @@ function my_message_addr(subject) {
  * receive emails from mobile devices?
  */
 $("a.message").attr("href", my_message_addr("Message from RobGraham.me web site"));
+
+
+/*
+ * Allow elements to smoothly slide onto page during scrolling.
+ * @see .slide-up SCSS attributes.
+ */
+$(window).scroll(function() {
+    $(".slide-up-animation").each(function(){
+        var pos = $(this).offset().top;
+
+        var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+            $(this).addClass("slide-up");
+        }
+    });
+});
+/*
+ * Slide up all elements that should be visible on the page without initial scrolling.
+ * Prevents permanent hiding of elements on pages that are too short to scroll.
+ */
+$(".slide-up-animation").each(function(){
+    if ($(this).offset().top < $(window).height()) {
+        $(this).addClass("slide-up");
+    }
+});

@@ -33,6 +33,42 @@ footer {
   min-height: 120px;
 }
 
+
+/* Allow elements to smoothly slide onto page during scrolling. */
+@media screen {
+  .slide-up-animation {
+    visibility: hidden;
+  }
+  .slide-up {
+    animation-name: slide-up;
+    -webkit-animation-name: slide-up;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    visibility: visible;
+  }
+  @keyframes slide-up {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide-up {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+}
+
+
 .navbar {
   min-height: 50px;
   background-color: #000000;
