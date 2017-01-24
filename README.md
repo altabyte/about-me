@@ -25,10 +25,11 @@ Launch the localhost server
 
 The site should then be available locally on port **4040** - [http://localhost:4040/](http://localhost:4040/)
 
+---
+
 #### Note 1
 Without `--baseurl ''` the localhost URL will be
-[http://localhost:4000/about-me/](http://localhost:4000/about-me/)
+[http://localhost:4040/about-me/](http://localhost:4040/robgraham.me/)
 
 #### Note 2
-The default port for Jekyll is 4000, however [NX Server](https://www.nomachine.com/)
-also uses this port so I have decided to use port 4040 locally.
+The default port for [Jekyll](http://jekyllrb.com/) is 4000, however [NX Server](https://www.nomachine.com/) also uses this port so I use port 4040 locally.
